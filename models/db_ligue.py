@@ -3,7 +3,7 @@
 db.define_table('discipline',
                 Field('libelle','string',requires=IS_NOT_EMPTY()),
                 Field('olympique','string',requires=IS_IN_SET(['OUI','NON']))
-                ,migrate = False
+                ,migrate = True
                )
 
 db.define_table('ligue',
@@ -15,5 +15,5 @@ db.define_table('ligue',
              Field('URLSiteWeb','string'),
              Field('emailContact','string'),
              Field('idDiscipline','reference discipline',requires =IS_IN_DB(db,db.discipline.id,'%(libelle)s'))
-            ,migrate = False
+            ,migrate = True
                 )
