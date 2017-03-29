@@ -52,7 +52,7 @@ service = Service()
 plugins = PluginManager()
 
 ## create all tables needed by auth if not custom tables
-auth.define_tables(username=False, signature=False,migrate=True)
+auth.define_tables(username=False, signature=False,migrate=False)
 
 ## configure email
 mail = auth.settings.mailer
