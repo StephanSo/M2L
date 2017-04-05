@@ -24,7 +24,9 @@ Réservations du <b>{{=(response._vars['dateRecherchee']).strftime("%d/%m/%Y")}}
 <br/>
 {{else:}}
 
-Aucune réservation n'est enregistré pour le {{=(response._vars['dateRecherchee'])}} 
+Aucune réservation ne correspond aux critères de recherche
+        <br />
+            <a href="/M2L/ctrl_salle"><input type="button" value="Retour" ></a>
 {{pass}}
 {{else:}}
 {{=BEAUTIFY(response._vars)}}
